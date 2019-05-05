@@ -11,7 +11,7 @@ class WordTrainer:
 
     def __init__(self, lr, n_epochs, embedding_dim, hidden_dim,
                  batch_size, seq_len, path, save_path, criterion,
-                 split_factor, bi=False, **kwargs):
+                 split_factor, max_count, bi=False, **kwargs):
 
         self._n_epochs = n_epochs
         self._hidden = hidden_dim
@@ -20,7 +20,7 @@ class WordTrainer:
         self._criterion = criterion
 
 
-        datasource = WordDatasource(path, seq_len)
+        datasource = WordDatasource(path, seq_len, max_count)
         length = datasource.__len__()
         idxs = np.arange(length)
 

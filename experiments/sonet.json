@@ -1,18 +1,17 @@
 {
-  "embedding_dim":5,
-  "hidden_dim":10,
-  "seq_len": 10,
+  "embedding_dim":10,
+  "hidden_dim":20,
+  "seq_len": 5,
+  "max_count": 50,
   "bi":  false,
-  "path": "/home/yegor/Documents/MLProjects/assets/npl_lang_models/shakespeare.txt",
-  "save_path": "/home/yegor/Documents/MLProjects/inferences/sonets4.pkl",
-  "batch_size":2,
-  "train_shuffle":true,
-  "test_shuffle":true,
+  "path": "/home/yegor/Desktop/projects/MLProjects/assets/npl_lang_models/shakespeare.txt",
+  "save_path": "/home/yegor/Desktop/projects/MLProjects/inferences/sonets4.pkl",
+  "batch_size":16,
   "inference": false,
   "lr":0.0001,
-  "n_epochs":5,
+  "n_epochs":2,
   "split_factor":0.8,
   "inference_params": { "seed": 0,
-                        "num_lines": 4 }
+                        "num_lines": 3 }
 
 }

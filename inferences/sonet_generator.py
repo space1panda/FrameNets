@@ -9,9 +9,10 @@ from models.wordmodeltorch import WordModel
 import numpy as np
 import json
 
-train_params = json.load(open('/home/yegor/Documents/MLProjects/experiments/sonet.json'))
+train_params = json.load(open('/home/yegor/Desktop/projects/MLProjects/experiments/sonet.json'))
 
-datas = WordDatasource(path=train_params['path'], seq_len=train_params['seq_len'])
+datas = WordDatasource(path=train_params['path'], seq_len=train_params['seq_len'],
+                       max_count=train_params['max_count'])
 
 model = WordModel(embedding_dim=train_params['embedding_dim'],
                   hidden_dim=train_params['hidden_dim'],
@@ -22,10 +23,11 @@ def get_sample(model, seed, num_lines):
     parameters = torch.load(train_params['save_path'])
     model.load_state_dict(parameters['model_state'])
     model.eval()
-    x = 0
+    x = 1
     ixs = []
     idx = seed
-    while ixs.count(0) < num_lines:
+    count = 0
+    while ixs.count(1) < num_lines:
         with torch.no_grad():
             x = torch.tensor(x).view(1, -1)
             out = model(x)
