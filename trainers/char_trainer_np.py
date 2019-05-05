@@ -1,5 +1,5 @@
-from utils.charutils_np import *
-from datasources.chardataloader import *
+from utils.utils_np import *
+from datasources.dataloader_np import *
 from models.charmodel_np import *
 import pickle
 

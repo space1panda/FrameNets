@@ -27,7 +27,7 @@
 
 ### Current  list of solutions:
 
-####1. Fairy Country Generator:
+#### 1. Fairy Country Generator:
 ##### Char-based language model RNN (numpy-only)
 #
 
@@ -40,8 +40,13 @@
     git clone mlprojects
     cd mlprojects/experiments
     python fairy_land_generator.py
+  ##### config files&terminal inteface will be added...
+
+#### 2. Poems Generator:
+##### token-based language model with LSTM (PyTorch)
+   ###### in progress
     
-##### config files&terminal inteface will be added...
+
    
 
 

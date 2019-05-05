@@ -5,7 +5,7 @@ if cdir not in sys.path:
     sys.path.append(cdir)
 import pickle
 from datasources.chardatasource import CharDatasource
-from utils.charutils_np import sample, print_sample
+from utils.utils_np import sample, print_sample
 
 def generate_countries(num_countries, path, params_path, seq_len):
     datas = CharDatasource(path=path, seq_len=seq_len)

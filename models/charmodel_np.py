@@ -1,5 +1,5 @@
 import numpy as np
-from utils.charutils_np import clip
+from utils.utils_np import clip
 
 class CharModelRNN:
 
